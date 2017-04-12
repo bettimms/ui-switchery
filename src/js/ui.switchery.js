@@ -3,14 +3,24 @@
  */
 
 (function (app) {
-    app.directive("uiSwitchery", ["$parse", uiSwitchery]);
-    function uiSwitchery($parse) {
+
+    app.provider("uiSwitcheryConfig", function () {
+        this.setOptions = function (options) {
+            this.options = options;
+        }
+        this.$get = function () {
+            return this;
+        }
+    });
+
+    app.directive("uiSwitchery", ["$parse", "uiSwitcheryConfig", uiSwitchery]);
+    function uiSwitchery($parse, uiSwitcheryConfig) {
         return {
             restrict: "A",
             require: "^ngModel",
             scope: true,
             link: function (scope, element, attrs, ngModel) {
-                var options = $parse(attrs.uiSwitchery)(scope);
+                var options = $parse(attrs.uiSwitchery)(scope) || uiSwitcheryConfig.options;
                 var switchery = new Switchery(element[0], options);
 
                 element.bind("change", function () {

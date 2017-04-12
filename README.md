@@ -5,7 +5,7 @@
 ## Description
 
 ui-switchery is a simple angularjs directive, wrapper for [switchery.js](https://github.com/abpetkov/switchery).
-Solves known problems(of other libraries/directives) with ng-model synchronization!
+Solves known problems (of other libraries/directives) with ng-model synchronization!
 
 
 ![Preview](http://i.imgur.com/0PcuTbO.jpg)
@@ -60,7 +60,7 @@ angular.module("app", ["ui.switchery"]);
 - `speed` : length of time that the transition will take, ex. '0.4s', '1s', '2.2s' (Note: transition speed of the handle is twice shorter)
 - `size` : size of the switch element (small or large)
 
-##### Enable/Disable
+##### Enable/Disable:
 
 
 ```html
@@ -73,6 +73,29 @@ angular.module("app", ["ui.switchery"]);
 ```html
 <input type="checkbox" ng-model="switch.on" ng-change="onChangeEvent()"/>
 ```
+
+##### uiSwitcheryConfigProvider:
+Configure default options for the whole application
+
+<sub>**Note**: Configuration from attributes or controller will have priority against config provider.
+</sub>
+```js
+angular.module("app", ["ui.switchery"])
+    .config(function (uiSwitcheryConfigProvider) {
+        var defaults = {
+              secondaryColor: '#dfdfdf'
+            , jackColor: '#fff'
+            , jackSecondaryColor: null
+            , className: 'switchery'
+            , disabled: false
+            , disabledOpacity: 0.5
+            , speed: '0.4s'
+            , size: 'small'
+        };
+        uiSwitcheryConfigProvider.setOptions(defaults);
+});
+```
+
 
 ## Contact
 
