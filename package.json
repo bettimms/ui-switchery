@@ -21,14 +21,15 @@
     "angular-toggle"
   ],
   "dependencies": {
-    "angular": "1.6.2",
-    "gulp": "^3.9.1",
-    "browser-sync": "^2.18.8",
     "switchery": "0.8.2"
   },
   "bugs": {
     "url": "https://github.com/bettimms/ui-switchery/issues"
   },
   "homepage": "https://github.com/bettimms/ui-switchery#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "angular": "1.6.2",
+    "gulp": "^3.9.1",
+    "browser-sync": "^2.18.8"
+  }
 }
