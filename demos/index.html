@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular switchery demos</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	</head>
+	<body ng-app="app">
+
+		<div ng-controller="HomeController as homeCtrl">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<button class="btn btn-success" ng-click="homeCtrl.toggleDisable()">Toggle disable</button>
+						<button class="btn btn-primary" ng-click="homeCtrl.changeModel()">Change range</button>
+						<hr>
+						<input type="checkbox" ui-switchery ng-model="homeCtrl.switchA" ng-change="homeCtrl.onChange()" ng-disabled="homeCtrl.disabled"/>
+						<hr>
+						Model:
+						<pre>{{homeCtrl.switchA}}</pre>
+						Disabled:
+						<pre>{{homeCtrl.disabled}}</pre>
+					</div>
+					<div class="col-sm-4">
+						<input type="checkbox" ui-switchery="{color:'skyblue'}" ng-model="homeCtrl.selectedItem.isSelected"/>
+						<hr>
+						Dynamic model value
+						<br>
+						<ul class="list-group">
+							<li class="list-group-item btn btn-default" ng-class="item.isSelected ? 'active':''"
+							    ng-repeat="item in homeCtrl.items"
+							    ng-click="homeCtrl.selectItem(item)">{{item.name}}
+								({{item.isSelected}})</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-4" ng-controller="TestController">
+						<input type="checkbox" ui-switchery="{size:'large',color:'#bd214c'}" ng-model="switchA.on"/>
+						<hr>
+						Direct to $scope
+						<pre>{{switchA.on}}</pre>
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+
+
+		<!--<script src="http://momentjs.com/downloads/moment.min.js"></script>-->
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.js"></script>
+		<script src="../node_modules/angular/angular.js"></script>
+
+		<script src="../src/js/ui.switchery.js"></script>
+		<script src="./index.js"></script>
+		<script src="./js/HomeController.js"></script>
+		<script src="./js/OldScopeController.js"></script>
+	</body>
+</html>
