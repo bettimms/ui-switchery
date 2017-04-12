@@ -26,6 +26,12 @@ Solves known problems(of other libraries/directives) with ng-model synchronizati
 $ bower install ui-switchery
 ```
 
+##### NPM:
+
+```shell
+$ npm install ui-switcher
+```
+
 ## Usage
 
 ```js
