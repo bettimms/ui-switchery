@@ -21,7 +21,7 @@
     "angular-toggle"
   ],
   "dependencies": {
-    "switchery": "0.8.2"
+    "switchery": "~0.8.1"
   },
   "bugs": {
     "url": "https://github.com/bettimms/ui-switchery/issues"
