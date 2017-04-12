@@ -1,13 +1,9 @@
 {
   "name": "ui-switchery",
-  "version": "1.0.0-beta.0",
   "description": "Angular directive for switchery.js",
   "main": "src/js/ui.switchery.js",
   "author": "Betim S., <bettimms@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bettimms/ui-switchery.git"
@@ -20,16 +16,19 @@
     "angular-switchery",
     "angular-toggle"
   ],
+  "homepage": "https://github.com/bettimms/ui-switchery",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "jquery": ">=1.8",
     "angular": "1.6.2",
     "gulp": "^3.9.1",
     "browser-sync": "^2.18.8",
     "switchery": "0.8.2"
-  },
-  "bugs": {
-    "url": "https://github.com/bettimms/ui-switchery/issues"
-  },
-  "homepage": "https://github.com/bettimms/ui-switchery#readme",
-  "devDependencies": {}
+  }
 }
