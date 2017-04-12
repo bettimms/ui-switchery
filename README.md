@@ -29,7 +29,7 @@ $ bower install ui-switchery
 ##### NPM:
 
 ```shell
-$ npm install ui-switcher
+$ npm install ui-switchery
 ```
 
 ## Usage
