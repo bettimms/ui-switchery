@@ -99,7 +99,7 @@ angular.module("app", ["ui.switchery"])
 
 ## Contact
 
-[Twitter](https://twitter.com/bettimms), [GitHub](https://github.com/bettimms).
+[GitHub](https://github.com/bettimms).
 
 
 ## License
